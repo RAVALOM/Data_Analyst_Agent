@@ -5,15 +5,16 @@ services:
     plan: starter 
     healthCheckPath: /
 envVars:
-  - key: GOOGLE_API_KEY
-    fromSecret: true
-  - key: HUGGINGFACEHUB_API_TOKEN
-    fromSecret: true
-  - key: OPENAI_API_KEY
-    fromSecret: true
+      - key: GOOGLE_API_KEY
+        fromSecret: true
+      - key: HUGGINGFACEHUB_API_TOKEN
+        fromSecret: true
+      - key: OPENAI_API_KEY
+        fromSecret: true
     disk:
       name: huggingface-cache
       mountPath: /huggingface_cache
 
       sizeGB: 5
+
 
