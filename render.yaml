@@ -6,11 +6,11 @@ services:
     healthCheckPath: /
     envVars:
       - key: GOOGLE_API_KEY
-        fromSecret: true
+        fromSecret: GOOGLE_API_KEY
       - key: HUGGINGFACEHUB_API_TOKEN
-        fromSecret: true
+        fromSecret: HUGGINGFACEHUB_API_TOKEN
       - key: OPENAI_API_KEY
-        fromSecret: true
+        fromSecret: OPENAI_API_KEY
     disk:
       name: huggingface-cache
       mountPath: /huggingface_cache
